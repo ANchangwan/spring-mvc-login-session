@@ -1,7 +1,6 @@
 package hello.login.web.session;
 
 import hello.login.domain.member.Member;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockHttpServletRequest;
@@ -22,6 +21,7 @@ public class SessionManagerTest {
        Member member = new Member();
 
        sessionManager.createSession(member, response);
+       System.out.println("memeber = "+member);
 
        // 요청 응답 쿠키 저장
        // 클라이언트에서 서버로
